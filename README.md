@@ -12,7 +12,7 @@ Note that image manipulation is necessary, inasmuch the MNIST data set samples c
 
 Contains plotting utilities, such as visualizing data samples, images binarization, model parameters histograms, receptive  fields visualization. These latter two graphical utilities are recommended in [this RBMs training tutorial](https://www.cs.toronto.edu/~hinton/absps/guideTR.pdf) (Hinton, 2010).
 
-Histograms serve the purpose to monitor the distribution of model parameters and their variations. Learning rate should be set in such a way to render the weights updates magnitudes about $10^{-3}$ times the weights themselves. Moreover, observe that in RBMs the hidden units act as *feature detectors* hence the receptive fields visualizations may help to understand which are the features that make the hidden neurons fire.
+Histograms serve the purpose to monitor the distribution of model parameters and their variations. Learning rate should be set in such a way to render the weights updates magnitudes about 0.001 times the weights themselves. Moreover, observe that in RBMs the hidden units act as *feature detectors* hence the receptive fields visualizations may help to understand which are the features that make the hidden neurons fire.
 
 ### `rbm_utils.py`
 
