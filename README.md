@@ -5,7 +5,7 @@
 
 The files `images_utils.py` and `rmb_utils.py` serve the purposes to provide functions to manipulate images and train the device itself, respectively. 
 
-Note that image manipulation is necessary, inasmuch the MNIST data set samples come as real-valued matrices but the RMB as here implemented can only deal with **binary** variables, that is values among $\{0, +1\}$. A data sample is binarized according to a user-defined threshold. 
+Note that image manipulation is necessary, inasmuch the MNIST data set samples come as real-valued matrices but the RMB as here implemented can only deal with **binary** variables, that is values among {0, +1}. A data sample is binarized according to a user-defined threshold. 
 
 ## Companion files overview
 ### `images_utils.py`
