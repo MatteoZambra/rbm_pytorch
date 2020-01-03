@@ -22,7 +22,7 @@ Contains the `rbm` class, containing all the training and parameters updating ut
 
 ## Remarks 
 
-As pointed out in [Hinton (2010)](https://www.cs.toronto.edu/~hinton/absps/guideTR.pdf), in the last step of the Gibbs chain which is run to obtain unbiased estimated of the log-likelihhod gradients, hidden activity patterns should be sampled as probabilities, instead of binarizing such probabilities to obtain a vector of binary values as done for the other sampling. This reduces sampling noise. 
+As pointed out in [Hinton (2010)](https://www.cs.toronto.edu/~hinton/absps/guideTR.pdf), in the last step of the Gibbs chain which is run to obtain unbiased estimated of the log-likelihood gradients, hidden activity patterns should be sampled as probabilities, instead of binarizing such probabilities to obtain a vector of binary values as done for the other sampling. This reduces sampling noise. 
 
 ## Further improvements
 A RBM is a single hidden layer model. However the power of Deep Learning stems from the higher level of abstraction that can be gained with a *deep* architecture. While the results of this simulation may seem satisfactory, since some digits are correctly rencostructed, better results may be attained with deeper architectures.
@@ -30,6 +30,6 @@ A RBM is a single hidden layer model. However the power of Deep Learning stems f
 What can be improved may be
 
 * A deeper network. It would be a different model, namely *Deep Belief Network*. Note that it does not suffice to make a RBM deeper for the sake of building a *Deep Boltzmann Machine*. While being structurally similar, DBNs and DBMs differ since the former are directed Probabilistic Graphical Models
-* binarize all the samples in all the batches before training, instead of binarizing a data batch once it is fetched from the dedicated data structure in the training loop
+* Binarize all the samples in all the batches before training, instead of binarizing a data batch once it is fetched from the dedicated data structure in the training loop
 * Reconstruction error (MSE), used to monitor learning, does not provide a sensible measure of how well the device is learning, since it does not descend naturally from the objective function (Contrastive Divegence) that is minimized. The *free energy* of training samples and held-out samples could rather be a neater measure. See [Zorzi et al. (2013)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3747356/)
 * Enforce sparsity
